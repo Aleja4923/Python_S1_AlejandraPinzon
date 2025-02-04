@@ -1,6 +1,5 @@
+
 from Modul import *
-
-
 nombres = [  
     ["Adrián"],  
     ["Alejandra"],  
@@ -77,6 +76,39 @@ while (b==True):
         print("1. Agregar estudiante")  
         print("2. Editar estudiante")  
         print("3. Eliminar estudiante")  
-        print("4. ver lista")  
-        print("5. Salir")
+        print("4. Ver lista")  
+        print("5. Salir") 
 
+        op = int(input(": "))
+        if op == 1:
+                nuevo_nombre = input("Ingrese el nombre completo del estudiante : ")
+                nuevo_apellido = input("Ingrese los apellidos del estudiante: ")
+                agregar(nuevo_nombre,nuevo_apellido,nombres,apellidos)
+                print("Estudiante agregado con exito.")
+
+        if op == 2:  
+                ne = int(input("Ingrese el numero del estudiante: "))  
+                nu = int(input("Desea editar 1. Nombre 2. Apellido 3. Nombre y apellido: "))  
+       
+                match nu:  
+                        case 1:  
+                                nombreEst = input("¿Cuál será el nombre nuevo del estudiante?: ")
+                                Nuevonombre(nombres,ne,nombreEst)
+                        case 2: 
+                                apellidoE = input("¿Cuál será el apellido nuevo del estudiante?: ")
+                                Nuevoape(apellidos,ne,apellidoE)
+                        case 3:  
+                                nombreE = input("¿Cuál sera el nombre nuevo del estudiante?: ")  
+                                apellidoE = input("¿Cuál sera el apellido nuevo del estudiante?: ") 
+                                Nuevonombre(nombres,ne,nombreEst)
+                                Nuevoape(apellidos,ne,apellidoE)
+
+        if op == 3:
+                funcion(nombres,apellidos)
+                numeroEstudiante=int(input("Cual estudiante quieres eliminar?:"))
+                eliminar(nombres,numeroEstudiante,apellidos)
+
+        if op == 4:
+                funcion(nombres,apellidos)
+        if op == 5:
+                b=False

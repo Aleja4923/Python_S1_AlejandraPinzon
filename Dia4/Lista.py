@@ -1,6 +1,6 @@
 def funcion():  
        for i in range(len(nombres)):  
-         print("Estudiante #", i + 1, ": ", nombres[i], apellidos[i])  
+         print("Estudiante #", i + 1, ": "," ".join(nombres[i])," ".join(apellidos[i]))  
 
 
 nombres = [  
@@ -128,4 +128,3 @@ while (b==True):
                 funcion()
         if op == 5:
                 b=False
-
